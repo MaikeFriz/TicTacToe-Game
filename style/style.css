@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+}
+
+/* Wrapper für das gesamte Spielfeld und die Überschrift */
+#content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #313131;
+    /* Hintergrundfarbe */
+}
+
+/* Stil für die Überschrift */
+h1 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    /* Comic Sans Schriftart */
+    color: white;
+    /* Weiße Schrift */
+    margin-bottom: 20px;
+    /* Abstand zum Spielfeld */
+    font-size: 3rem;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    /* Comic Sans Schriftart */
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    /* Dickere Linien */
+    text-align: center;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+td:hover{
+    background-color: rgba(255, 255, 255, 0.297);
+}
+
+/* Farben für 'x' und 'o' */
+.x {
+    color: #FEC000;
+    /* Gelb für 'x' */
+}
+
+.o {
+    color: #03ADE7;
+    /* Blau für 'o' */
+}
+
+/* Außenlinien des Spielfelds ausblenden */
+table tr:first-child td {
+    border-top: none;
+    /* Obere Außenlinie entfernen */
+}
+
+table tr:last-child td {
+    border-bottom: none;
+    /* Untere Außenlinie entfernen */
+}
+
+table tr td:first-child {
+    border-left: none;
+    /* Linke Außenlinie entfernen */
+}
+
+table tr td:last-child {
+    border-right: none;
+    /* Rechte Außenlinie entfernen */
+}
+
+td svg {
+    pointer-events: none; /* Verhindert, dass SVGs anklickbar sind */
+}
+
+/* Stil für den Neustart-Button */
+.restart-btn {
+    font-size: 1.5rem;
+    color: white;
+    background-color: #03ADE7; 
+    border: 2px solid white;
+    border-radius: 10px; 
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    margin-top: 80px;
+}
+
+/* Hover-Effekt für den Button */
+.restart-btn:hover {
+    background-color: #03aee76a; /* Farbwechsel passend zur 'x'-Farbe */
+    color: #313131; /* Text wird dunkel */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Verstärkter Schatten */
+    transform: translateY(-2px); /* Leichtes Hochspringen */
+}
+
+/* Fokus-Stil für Tastaturbedienung */
+.restart-btn:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.7); /* Weißer Fokusrahmen */
+    outline-offset: 2px;
+}
